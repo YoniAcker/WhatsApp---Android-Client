@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Part3</string>
+    <string name="et_user_name">User name:</string>
+    <string name="et_password">Passsword:</string>
+    <string name="Login_btn_to_login">login</string>
+    <string name="register_in_register">register</string>
+    <string name="name_of_app_fomo">Fomo</string>
+    <string name="login_welcome">Welcome to Fomo!</string>
+    <string name="text_logo">logo</string>
+    <string name="verify_password_register">Verify the password</string>
+    <string name="register_et_password">Enter your password</string>
+    <string name="et_register_user_name">Enter your user name:</string>
+    <string name="register_title">Register</string>
+    <string name="already_register_btn">Already registered?\nreturn to login</string>
+    <string name="Instructions_for_registration">* The password must combine letters and numbers.\n* The password must be at least 8 characters long.\n* Username and display name cannot contain spaces.</string>
+    <string name="register_display_name">Enter your display name:</string>
+    <string name="btn_upload_image">Upload an image</string>
+    <string name="desc_user_image">User image</string>
+    <string name="BaseUrl">http://10.0.2.2:5000/api/Users</string>
+</resources>
