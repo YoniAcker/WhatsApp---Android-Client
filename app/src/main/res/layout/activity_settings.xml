@@ -4,26 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DD0D6EE4"
-    tools:context=".activities.SettingsActivity">
+    tools:context=".activities.SettingsActivity"
+    android:background="@drawable/settings"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/userInfo"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#DD094185"
+        android:background="@color/up_line2"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="70dp"
-            android:layout_height="match_parent"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
             android:layout_margin="5dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="5dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -51,22 +54,20 @@
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/cardView">
-        </TextView>
+            app:layout_constraintStart_toEndOf="@+id/cardView"></TextView>
 
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#FF9800"
+            android:backgroundTint="@color/btns"
             android:gravity="center"
             android:text="@string/log_out_button"
-            android:textColor="#424242"
+            android:textColor="@color/text_in_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </Button>
+            app:layout_constraintTop_toTopOf="parent"></Button>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -77,18 +78,18 @@
         app:layout_constraintTop_toBottomOf="@+id/userInfo">
 
         <TextView
+            android:id="@+id/size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginStart="16dp"
             android:text="@string/settings_night_mode"
-            android:textColor="#263238"
-            android:textSize="25sp"
+            android:textColor="@color/text"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <Switch
             android:id="@+id/switchNightMode"
@@ -116,13 +117,12 @@
             android:layout_margin="20dp"
             android:layout_marginStart="16dp"
             android:text="@string/settings_server_address"
-            android:textColor="#263238"
-            android:textSize="25sp"
+            android:textColor="@color/text"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <EditText
             android:id="@+id/serverAddress"
@@ -140,17 +140,55 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/firebaseID"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/firebaseET"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:autofillHints=""
+            android:inputType="text|textMultiLine"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck"></EditText>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="@string/settings_submit"
-        android:textColor="#424242"
         android:layout_marginVertical="15dp"
+        android:backgroundTint="@color/btns"
+        android:text="@string/settings_submit"
+        android:textColor="@color/text_in_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-    </Button>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

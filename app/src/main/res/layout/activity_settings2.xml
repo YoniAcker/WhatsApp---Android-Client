@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DD0D6EE4"
+    android:background="@drawable/settings"
     tools:context=".activities.Settings2Activity">
 
 
@@ -20,13 +20,12 @@
             android:layout_margin="20dp"
             android:layout_marginStart="16dp"
             android:text="@string/settings_night_mode"
-            android:textColor="#263238"
+            android:textColor="@color/text"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <Switch
             android:id="@+id/switchNightMode"
@@ -48,19 +47,19 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         tools:layout_editor_absoluteX="0dp">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginStart="16dp"
             android:text="@string/settings_server_address"
-            android:textColor="#263238"
+            android:textColor="@color/text"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <EditText
             android:id="@+id/serverAddress"
@@ -69,12 +68,15 @@
             android:layout_marginHorizontal="10dp"
             android:autofillHints=""
             android:inputType="text"
-            android:textColorHint="#000000"
+            android:textColor="@color/text_in_btn"
+            android:textColorHighlight="@color/text_in_btn"
+            android:textColorHint="@color/text_in_btn"
+            android:textColorLink="@color/text_in_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck">
-        </EditText>
+            tools:ignore="LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck"></EditText>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -82,13 +84,22 @@
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="@string/settings_submit"
-        android:textColor="#424242"
         android:layout_marginVertical="15dp"
+        android:backgroundTint="@color/btns"
+        android:text="@string/settings_submit"
+        android:textColor="@color/text_in_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-    </Button>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"></Button>
+
+    <EditText
+        android:id="@+id/firebaseET2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="195dp"></EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

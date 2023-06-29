@@ -25,4 +25,9 @@
     <string name="btn_upload_image">Upload an image</string>
     <string name="desc_user_image">User image</string>
     <string name="BaseUrl">http://10.0.2.2:5000/api/Users</string>
+    <string name="firebaseID">id for firebase:</string>
+    <string name="channel_name">my channel</string>
+    <string name="channel_description">i am a content</string>
+    <string name="default_notification_channel_id">im an notification!</string>
+    <string name="fcm_message">ammm... im a string</string>
 </resources>

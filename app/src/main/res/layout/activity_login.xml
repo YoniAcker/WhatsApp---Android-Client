@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/light_mode3"
+    style="@style/login_bg"
     tools:context=".activities.LoginActivity"
     >
 
@@ -125,9 +125,8 @@
         android:layout_margin="40dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_settings"
-        app:backgroundTint="#78E3F1"
+        app:backgroundTint="@color/btns"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.AddContactActivity">
+    tools:context=".activities.AddContactActivity"
+    style="@style/chat_bg"
+    >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="363dp"
+        android:layout_height="115dp"
+        android:background="@color/up_line2"
         android:orientation="vertical"
+        app:circularflow_radiusInDP="500"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
@@ -23,7 +29,8 @@
             android:ems="10"
             android:hint="@string/add_hint"
             android:inputType="text"
-            android:textColorHint="#8D6E63"
+            android:textColorHint="@color/text_in_btn"
+            android:textColorLink="@color/text_in_btn"
             tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
 
         <Button
@@ -31,7 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/add_button" />
+            android:text="@string/add_button"
+            android:textColor="@color/text_in_btn"
+            android:textColorHighlight="@color/text_in_btn"
+            android:textColorLink="@color/btns" />
     </LinearLayout>
 
 

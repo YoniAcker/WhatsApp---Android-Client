@@ -135,6 +135,7 @@ public class RegisterActivity extends AppCompatActivity {
         password_register = findViewById(R.id.password_register);
         display_name_register = findViewById(R.id.register_display_name);
         Button register_btn_finish = findViewById(R.id.register_finish_btn);
+
         viewModel = new ViewModelProvider(this).get(ErrorViewModel.class);
         viewModel.get().observe(this, error -> {
             if (error.equals("V")) {

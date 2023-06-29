@@ -46,6 +46,12 @@ public class ContactsActivity extends AppCompatActivity implements OnItemClickLi
             adapter.SetContacts(contactList);
             refreshLayout.setRefreshing(false);
         });
+
+
+
+
+
+
         FloatingActionButton btnAdd = findViewById(R.id.btnAdd);
         ActivityResultLauncher<Intent> getContact = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
