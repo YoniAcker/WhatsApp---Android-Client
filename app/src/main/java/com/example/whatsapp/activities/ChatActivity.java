@@ -1,5 +1,6 @@
 package com.example.whatsapp.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,10 +13,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.whatsapp.R;
 import com.example.whatsapp.adapters.MessageListAdapter;
@@ -23,16 +26,22 @@ import com.example.whatsapp.entities.Message;
 import com.example.whatsapp.entities.Sender;
 import com.example.whatsapp.entities.User;
 import com.example.whatsapp.viewmodels.MessagesViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class ChatActivity extends AppCompatActivity {
     private MessagesViewModel viewModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         User user = (User) getIntent().getSerializableExtra("user");
+
         TextView userName = findViewById(R.id.nameChat);
         userName.setText(user.getDisplayName());
         ImageView userPic = findViewById(R.id.picChat);

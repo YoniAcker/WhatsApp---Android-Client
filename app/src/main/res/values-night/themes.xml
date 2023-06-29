@@ -4,4 +4,19 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <!-- night mode -->
+    <style name="login_bg">
+        <item name="android:background">@drawable/login_night</item>
+    </style>
+
+    <!-- night mode -->
+    <style name="settings_bg">
+        <item name="android:background">@color/night_bg_settings</item>
+    </style>
+
+
+    <style name="chat_bg">
+        <item name="android:background">@drawable/fire_bg_chat_night</item>
+    </style>
 </resources>

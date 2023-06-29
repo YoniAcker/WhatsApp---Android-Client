@@ -1,5 +1,6 @@
 package com.example.whatsapp.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -11,14 +12,25 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
+
 import com.example.whatsapp.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Settings2Activity extends AppCompatActivity {
-
+    private EditText firebaseET;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_settings2);
+
+        firebaseET = findViewById(R.id.firebaseET2);
+
+
+
         Button btnSubmit = findViewById(R.id.btnSubmit);
         EditText serverAddress = findViewById(R.id.serverAddress);
         serverAddress.setText(getIntent().getStringExtra("serverURL"));

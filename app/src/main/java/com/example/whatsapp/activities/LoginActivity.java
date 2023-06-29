@@ -1,5 +1,6 @@
 package com.example.whatsapp.activities;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +17,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.whatsapp.R;
 import com.example.whatsapp.viewmodels.ErrorViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class LoginActivity extends AppCompatActivity {
     String serverURL = "http://10.0.2.2:5000/api/";
@@ -29,6 +32,15 @@ public class LoginActivity extends AppCompatActivity {
             i.putExtra("serverURL", serverURL);
             startActivity(i);
         });
+
+        FirebaseApp.initializeApp(this);
+
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(LoginActivity.this, instanceIdResult -> {
+            String newToken = instanceIdResult.getToken();
+
+        });
+
+
         ErrorViewModel viewModel = new ViewModelProvider(this).get(ErrorViewModel.class);
         Button btnLogin = findViewById(R.id.login_btn);
         EditText usernameEdit = findViewById(R.id.user_name_login), passwordEdit = findViewById(R.id.password_login);

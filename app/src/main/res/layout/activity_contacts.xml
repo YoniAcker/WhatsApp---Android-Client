@@ -4,18 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ContactsActivity">
+    style="@style/chat_bg"
+    tools:context=".activities.ContactsActivity"
+    >
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="370dp"
+        android:layout_height="786dp"
+        android:alpha="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lstContact"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#DD0D6EE4" />
+            android:fadingEdge="horizontal|vertical|none" />
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -23,12 +31,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
+        android:importantForAccessibility="no"
         android:src="@drawable/ic_add_contact"
-        app:backgroundTint="#78E3F1"
+        app:backgroundTint="@color/btns"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:importantForAccessibility="no">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintEnd_toEndOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSettings"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/btnSettings"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd"
+        app:srcCompat="@drawable/logo_dark" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnSettings"
@@ -37,8 +54,8 @@
         android:layout_margin="40dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_settings"
-        app:backgroundTint="#78E3F1"
+        app:backgroundTint="@color/btns"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

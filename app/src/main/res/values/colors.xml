@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="night_bg_settings">#600000</color>
     <color name="white">#FFFFFFFF</color>
+     <color name = "up_line">#9C0F62</color>
+    <color name = "up_line2">#C7117D</color>
+    <color name="btns" >#DAFF6A6A</color>
+    <color name="text">#C7117D</color>
+    <color name="bg_settings">#B0FFB26F</color>
+    <color name="text_in_btn">#FFCDD2</color>
+    <color name="bg_message">#DDFF7760</color>
+
 </resources>

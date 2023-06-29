@@ -6,4 +6,21 @@
     </style>
 
     <style name="Theme.WhatsApp" parent="Base.Theme.WhatsApp" />
+
+    <!-- light mode -->
+    <style name="login_bg">
+        <item name="android:background">@drawable/login_light</item>
+    </style>
+
+    <!-- light mode -->
+    <style name="settings_bg">
+        <item name="android:background">@color/bg_settings</item>
+    </style>
+
+
+    <style name="chat_bg">
+        <item name="android:background">@drawable/beach_light_mode</item>
+    </style>
+
+
 </resources>
